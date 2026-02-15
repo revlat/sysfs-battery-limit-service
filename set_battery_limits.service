@@ -1,0 +1,11 @@
+[Unit]
+Description=Set Battery Charge Limits
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/bin/set_battery_limits.py
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
